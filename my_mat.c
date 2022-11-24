@@ -12,6 +12,8 @@ int funcB(int originalGraph[][10], int a, int b)
     }
     else
         printf("False");
+        
+    return 1;
 }
 
 int funcC(int originalGraph[][10], int a, int b)
@@ -26,7 +28,7 @@ void funcD()
     exit(0);
 }
 
-int floydWarshall(int originalGraph[][10])
+void floydWarshall(int originalGraph[][10])
 {
    
     int a, b, c;
@@ -63,5 +65,4 @@ int floydWarshall(int originalGraph[][10])
         }
         
      }
-     return 1;
 }

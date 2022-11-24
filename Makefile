@@ -11,4 +11,5 @@ all: connections
 
 .PHONY: clean all
 
-clean: rm -f *.o *.out connections
+clean:
+	rm -f *.o *.out connections *.gch

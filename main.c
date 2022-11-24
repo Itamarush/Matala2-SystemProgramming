@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "my_mat.h"
-#include "my_mat.c"
+// #include "my_mat.c"
 
 int main()
 {
