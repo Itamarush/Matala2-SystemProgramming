@@ -26,7 +26,7 @@ void funcD()
     exit(0);
 }
 
-void floydWarshall(int originalGraph[][10])
+int floydWarshall(int originalGraph[][10])
 {
    
     int a, b, c;
@@ -63,4 +63,5 @@ void floydWarshall(int originalGraph[][10])
         }
         
      }
+     return 1;
 }

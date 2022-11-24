@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "my_mat.h"
+#include "my_mat.c"
 
 int main()
 {
@@ -11,6 +12,7 @@ int main()
     while (1)
     {  
         printf("Enter a/b/c/d");
+        scanf("%c", &ch);
 
         if (ch == 65)
         {
@@ -18,10 +20,16 @@ int main()
             {
                 for (j = 0; j < 10; j++)
                 {
-                    scanf("$d", num);
+                    scanf("%d", &num);
                     arr[i][j] = num;
 
-                    if (num == 0)
+                    if (i == j)
+                    {
+                        arr[i][j] = 0;
+                    }
+                    
+
+                    else if (num == 0)
                     {
                         arr[i][j] = 99999999;
                     }
