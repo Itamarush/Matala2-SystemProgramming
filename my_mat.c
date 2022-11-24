@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "my_mat.h"
-// #include "main.c"
 
 int funcB(int originalGraph[][10], int a, int b)
 {
@@ -27,7 +26,7 @@ void funcD()
     exit(0);
 }
 
-int floydWarshall(int originalGraph[][10])
+void floydWarshall(int originalGraph[][10])
 {
    
     int a, b, c;
@@ -64,5 +63,4 @@ int floydWarshall(int originalGraph[][10])
         }
         
      }
-     return 1;
 }

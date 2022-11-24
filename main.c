@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "my_mat.h"
-// #include "my_mat.c"
 
 int main()
 {
@@ -21,12 +20,15 @@ int main()
                 {
                     scanf("$d", num);
                     arr[i][j] = num;
+
+                    if (num == 0)
+                    {
+                        arr[i][j] = 99999999;
+                    }
                 }
                 
             }
         }
-
-        floydWarshall(arr);
 
         if (ch == 66)
         {
