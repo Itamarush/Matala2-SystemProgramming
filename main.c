@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "my_mat.h"
-// #include "my_mat.c"
 
 int main()
 {
@@ -11,7 +10,7 @@ int main()
     
     while (1)
     {  
-        printf("Enter a/b/c/d");
+        // printf("Enter a/b/c/d");
         scanf("%c", &ch);
 
         if (ch == 65)
@@ -56,6 +55,7 @@ int main()
         {
             funcD();
         }
+        printf("\n");
     }        
     return 0;
 }
