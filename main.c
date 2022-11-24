@@ -7,46 +7,25 @@ int main()
 {
     int arr [10][10];
     char ch;
-    int a, b, num, xy, yz;
-    int paa;
-
-    FILE* txt;
-    txt = fopen("txt.txt", "r");
+    int a, b, i, j, num;
+    
     while (1)
     {  
         printf("Enter a/b/c/d");
-        scanf("%c", &ch);
-        
+
         if (ch == 65)
         {
-            int i, j, num;
             for ( i = 0; i < 10; i++)
             {
-                for ( j = 0; j < 10; j++)
+                for (j = 0; j < 10; j++)
                 {
-                    // if (i == j)
-                    // {
-                    //     arr[i][j] = 0;
-                    //     continue;
-                    // }
-                    
-                    num = fgetc(txt) - '0';
-
-                    if (num == -38)
-                        {
-                        num =fgetc(txt) - '0';   
-                        }
-
-                    if (num == 0)
-                        {
-                            arr[i][j] = 99999999;
-                            continue;
-                        }
-                    
-                    arr[i][j] =(int) num;
-                }  
+                    scanf("$d", num);
+                    arr[i][j] = num;
+                }
+                
             }
         }
+
         floydWarshall(arr);
 
         if (ch == 66)
