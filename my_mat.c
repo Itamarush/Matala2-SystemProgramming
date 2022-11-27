@@ -65,19 +65,24 @@ void funcD()
     exit(0);
 }
 
-void floydWarshall(int graph[][10]) {
-  int matrix[10][10], i, j, k;
+void floydWarshall(int graph[][10]) 
+{
+  int shortestPath[10][10];
+  int i, j, l;
 
   for (i = 0; i < 10; i++)
     for (j = 0; j < 10; j++)
-      matrix[i][j] = graph[i][j];
+      shortestPath[i][j] = graph[i][j];
 
  
-  for (k = 0; k < 10; k++) {
-    for (i = 0; i < 10; i++) {
-      for (j = 0; j < 10; j++) {
-        if (matrix[i][k] + matrix[k][j] < matrix[i][j])
-          matrix[i][j] = matrix[i][k] + matrix[k][j];
+  for (l = 0; l < 10; l++) 
+  {
+    for (i = 0; i < 10; i++) 
+    {
+      for (j = 0; j < 10; j++) 
+      {
+        if (shortestPath[i][l] + shortestPath[l][j] < shortestPath[i][j])
+          shortestPath[i][j] = shortestPath[i][l] + shortestPath[l][j];
       }
     }
   }
