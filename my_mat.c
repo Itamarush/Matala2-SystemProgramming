@@ -26,6 +26,7 @@ int funcA(int originalGraph[][10], int a)
             originalGraph[i][j] = a;
         }
     }
+    floydWarshall(originalGraph);
     return 1;
 }
 
@@ -44,7 +45,6 @@ int funcB(int originalGraph[][10], int a, int b)
 
 int funcC(int originalGraph[][10], int a, int b)
 {
-    floydWarshall(originalGraph);
 
     if (originalGraph[a][b] == 0 || originalGraph[a][b] == 99999999 )
     {
