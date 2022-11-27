@@ -61,6 +61,7 @@ int funcC(int originalGraph[][10], int a, int b)
 
 void funcD()
 {
+    printf("\n");
     exit(0);
 }
 
@@ -92,6 +93,5 @@ void floydWarshall(int graph[][10])
             {
                 graph[i][j] = shortestPath[i][j];
             }
-            printf("\n");
         }
 }
