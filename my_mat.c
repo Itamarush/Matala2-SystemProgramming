@@ -4,26 +4,27 @@
 
 int num, i, j;
 
-int funcA(int originalGraph[][10], int a)
+int funcA(int originalGraph[][10])
 {
     
     for ( i = 0; i < 10; i++)
     {
         for ( j = 0; j < 10; j++)
         {
+            scanf("%d", &num);
             if (i == j)
             {
                 originalGraph[i][j] = 0;
                 continue;
             }
 
-            else if (a == 0)
+            else if (num == 0)
                 {
                     originalGraph[i][j] = 99999999;
                     continue;
                 }
 
-            originalGraph[i][j] = a;
+            originalGraph[i][j] = num;
         }
     }
     floydWarshall(originalGraph);

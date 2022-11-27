@@ -16,8 +16,7 @@ int main()
 
         if (ch == 65)
         {
-            scanf("%d", &a);
-            funcA(arr, a);    
+            funcA(arr);       
         }  
         
         if (ch == 66)
