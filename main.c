@@ -1,42 +1,25 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "my_mat.h"
+// #include "my_mat.c"
+// #define INF  99999999
 
 int main()
 {
     int arr [10][10];
     char ch;
-    int a, b, i, j, num;
-    
+    int a, b;
+
     while (1)
     {  
-        // printf("Enter a/b/c/d");
         scanf("%c", &ch);
 
         if (ch == 65)
         {
-            for ( i = 0; i < 10; i++)
-            {
-                for (j = 0; j < 10; j++)
-                {
-                    scanf("%d", &num);
-                    arr[i][j] = num;
-
-                    if (i == j)
-                    {
-                        arr[i][j] = 0;
-                    }
-                    
-
-                    else if (num == 0)
-                    {
-                        arr[i][j] = 99999999;
-                    }
-                }
-                
-            }
-        }
-
+            scanf("%d", &a);
+            funcA(arr, a);    
+        }  
+        
         if (ch == 66)
         {
             scanf("%d", &a);
@@ -56,6 +39,45 @@ int main()
             funcD();
         }
         printf("\n");
-    }        
+
+    } 
+    
     return 0;
 }
+
+
+
+
+
+
+// int arr [10][10];
+    // char ch;
+    // int a, b, i, j, num;
+    
+    // while (1)
+    // {  
+    //     // printf("Enter a/b/c/d");
+    //     scanf("%c", &ch);
+
+    //     if (ch == 65)
+    //     {
+    //         for ( i = 0; i < 10; i++)
+    //         {
+    //             for (j = 0; j < 10; j++)
+    //             {
+    //                 scanf("%d", &num);
+    //                 arr[i][j] = num;
+
+    //                 if (i == j)
+    //                 {
+    //                     arr[i][j] = 0;
+    //                 }
+                    
+
+    //                 else if (num == 0)
+    //                 {
+    //                     arr[i][j] = 99999999;
+    //                 }
+    //             }
+                
+    //         }
