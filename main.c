@@ -29,14 +29,14 @@ int main()
         {
             scanf("%d", &a);
             scanf("%d", &b);
-            printf("%d", funcC(arr, a, b));
+            printf("%d\n", funcC(arr, a, b));
         }
         
         else if (ch == 68)
         {
             funcD();
         }
-        // printf("\n");
+        
 
     } 
     

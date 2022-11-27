@@ -35,10 +35,10 @@ int funcB(int originalGraph[][10], int a, int b)
     
     if ((originalGraph[a][b] != 0 && originalGraph[a][b] != INF) && (a != b))
     {
-        printf("True");
+        printf("True\n");
     }
     else
-        printf("False");
+        printf("False\n");
 
     return 1;
 }
@@ -61,7 +61,6 @@ int funcC(int originalGraph[][10], int a, int b)
 
 void funcD()
 {
-    printf("\n");
     exit(0);
 }
 
