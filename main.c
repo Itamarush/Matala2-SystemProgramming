@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "my_mat.h"
-// #include "my_mat.c"
-// #define INF  99999999
+
 
 int main()
 {

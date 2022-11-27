@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "my_mat.h"
-
-int num, i, j;
+#define INF 99999999
 
 int funcA(int originalGraph[][10])
 {
-    
+    int i, j, num;
     for ( i = 0; i < 10; i++)
     {
         for ( j = 0; j < 10; j++)
@@ -20,7 +19,7 @@ int funcA(int originalGraph[][10])
 
             else if (num == 0)
                 {
-                    originalGraph[i][j] = 99999999;
+                    originalGraph[i][j] = INF;
                     continue;
                 }
 
@@ -34,7 +33,7 @@ int funcA(int originalGraph[][10])
 int funcB(int originalGraph[][10], int a, int b)
 {
     
-    if ((originalGraph[a][b] != 0 && originalGraph[a][b] != 99999999) && (a != b))
+    if ((originalGraph[a][b] != 0 && originalGraph[a][b] != INF) && (a != b))
     {
         printf("True");
     }
@@ -47,7 +46,7 @@ int funcB(int originalGraph[][10], int a, int b)
 int funcC(int originalGraph[][10], int a, int b)
 {
 
-    if (originalGraph[a][b] == 0 || originalGraph[a][b] == 99999999 )
+    if (originalGraph[a][b] == 0 || originalGraph[a][b] ==  INF )
     {
         return -1;
     }
@@ -91,46 +90,8 @@ void floydWarshall(int graph[][10])
         {
             for (size_t j = 0; j < 10; j++)
             {
-                int x = matrix[i][j];
-                graph[i][j] = matrix [i][j];
+                graph[i][j] = shortestPath[i][j];
             }
             printf("\n");
         }
 }
-
-
-
-
-
-
-
-
-
-
-// void floydWarshall(int originalGraph[][10])
-// {
-   
-//     int a, b, c;
-//     int shortestPath[10][10];
-    
-//     for (a = 0; a < 10; a++)
-//     {
-//         for (b = 0; b < 10; b++)
-//         {
-//             shortestPath[a][b] = originalGraph[a][b];
-//         }
-//     }
-   
-//     for (c = 0; c < 10; c++) 
-//     {
-//        for (a = 0; a < 10; a++) 
-//         {
-//             for (b = 0; b < 10; b++) 
-//             {
-//                 if (shortestPath[a][c] + shortestPath[c][b] < shortestPath[a][b])
-//                 {
-//                     shortestPath[a][b] = shortestPath[a][c] + shortestPath[c][b];
-//                 }   
-//             }
-//         }
-//     } 
