@@ -65,9 +65,6 @@ void funcD()
     exit(0);
 }
 
- 
-
-// Implementing floyd warshall algorithm
 void floydWarshall(int graph[][10]) {
   int matrix[10][10], i, j, k;
 
@@ -75,7 +72,7 @@ void floydWarshall(int graph[][10]) {
     for (j = 0; j < 10; j++)
       matrix[i][j] = graph[i][j];
 
-  // Adding vertices individually
+ 
   for (k = 0; k < 10; k++) {
     for (i = 0; i < 10; i++) {
       for (j = 0; j < 10; j++) {
