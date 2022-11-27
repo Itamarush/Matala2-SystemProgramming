@@ -8,7 +8,7 @@ int main()
     int arr [10][10];
     char ch;
     int a, b;
-
+    
     while (1)
     {  
         scanf("%c", &ch);
@@ -36,7 +36,7 @@ int main()
         {
             funcD();
         }
-        printf("\n");
+        // printf("\n");
 
     } 
     
