@@ -1,11 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "my_mat.h"
-
+#define MatSize 10
+#define Achar 65
+#define Bchar 66
+#define Cchar 67
+#define Dchar 68
 
 int main()
 {
-    int arr [10][10];
+    int arr [MatSize][MatSize];
     char ch;
     int a, b;
     
@@ -13,26 +17,26 @@ int main()
     {  
         scanf("%c", &ch);
 
-        if (ch == 65)
+        if (ch == Achar)
         {
             funcA(arr);       
         }  
 
-        if (ch == 66)
+        if (ch == Bchar)
         {
             scanf("%d", &a);
             scanf("%d", &b);
             funcB(arr, a, b);
         }
         
-        else if (ch == 67)
+        else if (ch == Cchar)
         {
             scanf("%d", &a);
             scanf("%d", &b);
             printf("%d\n", funcC(arr, a, b));
         }
         
-        else if (ch == 68)
+        else if (ch == Dchar)
         {
             funcD();
         }
